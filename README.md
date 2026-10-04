@@ -8,7 +8,7 @@ Short answer, I wanted to avoid installing PHP and Composer globally the same
 way I'm avoiding installing NodeJS and NPM running on my local machine globally.
 It's merely for security reasons. I want to keep my machines clean from anything
 that can be used even by me to install something that I don't want, given the
-fact that NPM was recently used as a convinient tool by hackers.
+fact that NPM was recently used as a convenient tool by hackers.
 Sha1-Hulud! Remember that?!
 
 Now that you know the WHY, let's now do the HOW!
