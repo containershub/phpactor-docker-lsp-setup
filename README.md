@@ -29,12 +29,15 @@ inside Mason's `bin` directory.
     # Route Neovim LSP commands straight to our custom stable image
     docker run --rm -i \
       -v "$PWD":"$PWD" \
+      -v "$HOME/.cache/phpactor:/root/.cache/phpactor" \
       -w "$PWD" \
       local-phpactor:stable "$@"
     ```
     This Docker command makes sure that the container is only up while Neovim
     is open, upon closing Neovim the container will no longer run and will be
     removed!
+    Exactly for this reason we've to add volume mapping for indexes like:
+    `-v "$HOME/.cache/phpactor:/root/.cache/phpactor"`
 * Exit and run `chmod +x ~/.local/share/nvim/mason/bin/phpactor` to make
     executable.
 * Next we've to create `mason-receipt.json` for Phpactor so Mason can recognize
