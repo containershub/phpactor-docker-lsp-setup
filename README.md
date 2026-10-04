@@ -13,26 +13,6 @@ Sha1-Hulud! Remember that?!
 
 Now that you know the WHY, let's now do the HOW!
 
-1. Clone this repo
-2. Run `docker build -t local-phpactor:stable .` to build the image. The image
-    will be called `local-phpactor:stable`.
-3. After the image has been successfully built we've to setup a proxy script
-    inside Mason's `bin` directory.
-    * Run `nvim ~/.local/share/nvim/mason/bin/phpactor`
-    * Put the following shell code inside it:
-        ```bash
-        #!/bin/bash
-        # Route Neovim LSP commands straight to our custom stable image
-        docker run --rm -i \
-          -v "$PWD":"$PWD" \
-          -w "$PWD" \
-          local-phpactor:stable "$@"
-        ```
-    * Exit and run `chmod +x ~/.local/share/nvim/mason/bin/phpactor` to make
-        executable.
-    * 
-
-
 ### Step 1
 * Clone this repository!
 * Run `docker build -t local-phpactor:stable .` to build the image. The image
