@@ -1,7 +1,7 @@
 # Phpactor Docker Setup
 This is a minimal Phpactor Docker setup for PHP LSP running in Neovim with Mason.nvim
 
-> **[!WARNING]**
+> [!WARNING]
 > This setup is only for Phpactor with Mason. If you want to use Docker for
 > other LSPs as well then see ![lsp-docker](https://github.com/containershub/lsp-docker.git)!
 > However `lsp-docker` doesn't need Mason and is implemented without it!
